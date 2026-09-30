@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="noindex, nofollow" name="robots" />
+  <meta content="课程练习：个人介绍、技能与作品门户。" name="description" />
+  <title>
+   我的个人主页
+  </title>
+  <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
+  <!-- CSS 负责颜色、字体、布局；defer 让 JavaScript 在 HTML 解析完成后执行。 -->
+  <link href="styles.css" rel="stylesheet" />
+   <script src="works-data.js" defer></script>
+  <script src="works-render.js" defer></script>
+  <script src="app.js" defer></script>
+ </head>
+ <body>
+  <a class="skip-link" href="#main">
+   跳到正文
+  </a>
+  <!-- 第 4 课新增①：顶部阅读进度条，宽度由 JavaScript 控制 -->
+  <div class="reading-progress" id="reading-progress">
+  </div>
+  <header class="site-header">
+   <div class="container header-inner">
+    <a class="brand" href="#about">
+     我的主页
+    </a>
+    <!-- href="#栏目ID" 是原生锚点：即使不加载 JavaScript，也能跳到对应栏目。 -->
+    <nav aria-label="主导航">
+     <a href="#about">
+      关于
+     </a>
+     <a href="#experience">
+      经历
+     </a>
+     <a href="#projects">
+      科研
+     </a>
+     <a href="#skills">
+      技能
+     </a>
+     <a href="#portfolio">
+      作品
+     </a>
+     <a href="#teaching">
+      教学
+     </a>
+     <a href="#publications">
+      成果
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main id="main">
+   <!-- HTML 练习：修改姓名、研究方向、照片路径和联系方式。 -->
+   <section class="hero" id="about">
+    <div class="container">
+     <div class="hero-top">
+      <div class="hero-copy">
+       <h1>
+        钟毅
+        <span>
+         ZhongYi
+        </span>
+       </h1>
+       <p class="hero-role">
+        软件技术专业学生 · 前端开发学习者
+       </p>
+       <p class="hero-school">
+        广东省珠海广东科学技术职业学校 · 25昇腾ai班级
+       </p>
+      </div>
+      <div class="hero-visual">
+       <figure>
+        <img alt="个人头像占位图，请替换为自己的图片" height="220" src="assets/avatar.svg" width="220" />
+       </figure>
+      </div>
+     </div>
+     <div class="research-direction" id="research-direction">
+      <span class="eyebrow">
+       学习方向
+      </span>
+      <p>
+       HTML5、CSS3、JavaScript，正在学习 Git、数据库与网站部署。
+      </p>
+     </div>
+     <div class="profile-details">
+      <div>
+       <span>
+        学习阶段
+       </span>
+       <p>
+        在校学习
+       </p>
+      </div>
+      <div>
+       <span>
+        所在城市
+       </span>
+       <p>
+        珠海
+       </p>
+      </div>
+      <div>
+       <span>
+        联系
+       </span>
+       <p>
+        1353246262
+       </p>
+      </div>
+      <div>
+       <span>
+        学校地址
+       </span>
+       <p>
+        广东省珠海广东科学技术职业学校
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- 每个栏目复用 section → container → 标题/内容 的结构，统一由 CSS 控制样式。 -->
+   <section class="section" id="experience">
+    <div class="container">
+     <header class="section-heading">
+      <h2>
+       教育与工作经历
+      </h2>
+     </header>
+     <div class="section-content">
+      <!-- TASK-HTML：复制 experience-item 可增加一条自己的经历。 -->
+      <div class="experience-item">
+       <p class="experience-heading">
+        <strong>
+         广东省珠海广东科学技术职业学校 · 软件技术专业
+        </strong>
+        <time>
+         在读
+        </time>
+       </p>
+       <p class="experience-detail">
+        学习网页开发，用项目记录成长。
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="projects">
+    <div class="container">
+     <header class="section-heading">
+      <h2>
+       项目经历
+      </h2>
+     </header>
+     <div class="section-content">
+      <article class="research-item">
+       <h3>
+        <time>
+         课程练习
+        </time>
+        个人主页
+       </h3>
+       <p>
+        项目内容：制作自己的网页，展示资料与作品，记录修改、测试与发布过程。
+       </p>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="skills">
+    <div class="container">
+     <header class="section-heading">
+      <h2>
+       技能与实践
+      </h2>
+     </header>
+     <div class="section-content">
+      <ul class="skills-list">
+       <li>
+        <strong>
+         网页内容
+        </strong>
+        HTML5 结构、图片、链接。
+       </li>
+       <li>
+        <strong>
+         页面样式
+        </strong>
+        CSS3 字体、颜色、响应式布局。
+       </li>
+       <li>
+        <strong>
+         开发过程
+        </strong>
+        JavaScript、Git、检查与部署。
+       </li>
+      </ul>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="portfolio">
+    <div class="container">
+     <header class="section-heading">
+      <h2>
+       作品门户
+      </h2>
+      <p class="works-notice">
+       以下为课程练习作品。
+      </p>
+     </header>
+     <!-- 第 5 课新增：筛选与排序工具条。里面的按钮由 JavaScript 生成，
+          不写 JS 时这里是空的，页面照常显示全部作品。 -->
+     <div class="works-toolbar">
+      <div class="works-tags" id="works-tags">
+      </div>
+      <button class="works-sort" id="works-sort" type="button">
+       按年份：新→旧
+      </button>
+     </div>
+     <ol class="portfolio-list">
+      <li class="work-card work-blog">
+       <a href="#" rel="noopener noreferrer" target="_blank">
+        <div class="work-cover">
+         <img alt="简易个人介绍网页截图" decoding="async" height="800" src="assets/work-blog.png" width="1200" />
+        </div>
+        <div class="work-copy">
+         <h3>
+          简易个人介绍网页
+         </h3>
+         <p>
+          基础HTML+CSS练习，展示个人基础信息。
+         </p>
+        </div>
+       </a>
+      </li>
+      <li class="work-card work-community">
+       <a href="#" rel="noopener noreferrer" target="_blank">
+        <div class="work-cover">
+         <img alt="静态打卡页面截图" decoding="async" height="800" src="assets/work-community.png" width="1200" />
+        </div>
+        <div class="work-copy">
+         <h3>
+          学习打卡静态页面
+         </h3>
+         <p>
+          练习布局，记录日常学习打卡。
+         </p>
+        </div>
+       </a>
+      </li>
+      <li class="work-card work-greeting-card">
+       <a href="#" rel="noopener noreferrer" target="_blank">
+        <div class="work-cover">
+         <img alt="简单留言卡片页面截图" decoding="async" height="800" src="assets/work-greeting-card.png" width="1200" />
+        </div>
+        <div class="work-copy">
+         <h3>
+          简易留言卡片
+         </h3>
+         <p>
+          练习卡片样式，实现简单交互效果。
+         </p>
+        </div>
+       </a>
+      </li>
+      <li class="work-card work-music-station">
+       <a href="#" rel="noopener noreferrer" target="_blank">
+        <div class="work-cover">
+         <img alt="简易图片展示页截图" decoding="async" height="800" src="assets/work-music-station.png" width="1200" />
+        </div>
+        <div class="work-copy">
+         <h3>
+          图片浏览展示页
+         </h3>
+         <p>
+          练习图片排版，实现简单图片浏览。
+         </p>
+        </div>
+       </a>
+      </li>
+     </ol>
+    </div>
+   </section>
+   <section class="section" id="teaching">
+    <div class="container">
+     <header class="section-heading">
+      <h2>
+       学习与实践
+      </h2>
+     </header>
+     <div class="section-content">
+      <div class="teaching-group">
+       <h3>
+        本学期目标
+       </h3>
+       <ol>
+        <li>
+         每次课完成一个可运行的小改动。
+        </li>
+        <li>
+         能解释自己修改的 HTML、CSS 和 JavaScript。
+        </li>
+        <li>
+         使用 Git 记录版本，让作品能被别人访问。
+        </li>
+       </ol>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="section" id="publications">
+    <div class="container">
+     <header class="section-heading">
+      <h2>
+       学习记录
+      </h2>
+     </header>
+     <div class="section-content">
+      <div class="publication-group">
+       <h3>
+        我的记录
+       </h3>
+       <ol class="references">
+        <li>
+         完成了第一版个人主页，学会搭建网页基础结构。
+        </li>
+        <li>
+         练习CSS样式，学会调整页面布局和颜色。
+        </li>
+        <li>
+         尝试写简单JS小效果，遇到问题会查资料解决。
+        </li>
+        <li>
+         后续会继续做更多小项目，积累实战经验。
+        </li>
+       </ol>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <!-- 第 4 课新增：这两块由 JavaScript 控制，不写 JS 时它们不会出现 -->
+  <p aria-live="polite" class="section-indicator" id="section-indicator">
+  </p>
+  <button aria-label="返回页面顶部" class="to-top" id="to-top" type="button">
+   ↑
+  </button>
+  <footer>
+   <div class="container footer-inner">
+    <a href="#about">
+     回到顶部
+    </a>
+    <a href="#portfolio">
+     作品门户
+    </a>
+   </div>
+  </footer>
+ </body>
+</html>
