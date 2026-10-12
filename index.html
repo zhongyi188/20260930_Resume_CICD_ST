@@ -8,7 +8,6 @@
   <title>我的个人主页</title>
   <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
   <style>
-    /* ========== 全局美化样式 ========== */
     * {
       margin: 0;
       padding: 0;
@@ -26,7 +25,7 @@
       --radius:14px;
     }
     body {
-      font-family: system-ui,-apple-system,Segoe UI,Roboto,"Microsoft YaHei",sans‑serif;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,"Microsoft YaHei",sans-serif;
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.65;
@@ -43,7 +42,6 @@
     ul,ol {
       list-style-position: inside;
     }
-    /* 跳过链接无障碍 */
     .skip-link {
       position:absolute;
       top:-40px;
@@ -54,7 +52,6 @@
       z-index:999;
     }
     .skip-link:focus { top:0; }
-    /* 阅读进度条 */
     .reading-progress {
       position:fixed;
       top:0;
@@ -64,7 +61,6 @@
       width:0%;
       z-index: 100;
     }
-    /* 导航栏 固定顶部 */
     .site-header {
       position:sticky;
       top:0;
@@ -96,12 +92,8 @@
       .header-inner { flex-direction:column;height:auto;padding:12px 0;gap:8px;}
       nav a { margin:0 8px !important; font-size:0.92rem;}
     }
-    /* Hero首页区块 */
     .hero {
       padding:60px 0 40px;
-    }
-    .hero-top {
-      /* 删除头像后不再左右布局，直接流式 */
     }
     .hero-copy h1 {
       font-size:2.4rem;
@@ -155,7 +147,6 @@
       font-size:0.84rem;
       color:var(--text-light);
     }
-    /* 通用section区块 */
     .section {
       padding:50px 0;
     }
@@ -181,7 +172,6 @@
       border-radius:var(--radius);
       box-shadow:var(--shadow);
     }
-    /* 经历项目 */
     .experience-item,.research-item {
       margin-bottom:22px;
     }
@@ -194,21 +184,17 @@
       color:var(--text-light);
       font-weight:400;
     }
-    /* 技能列表 */
     .skills-list li {
       padding:10px 0;
       border-bottom:1px solid var(--border);
     }
     .skills-list li:last-child { border:none; }
-
-    /* 学习记录、教学 */
     .teaching-group ol,.references {
       padding-left:12px;
     }
     .teaching-group li,.references li {
       padding:6px 0;
     }
-    /* 返回顶部 */
     .to-top {
       position:fixed;
       bottom:26px;
@@ -235,7 +221,6 @@
       font-size:0.85rem;
       display:none;
     }
-    /* 页脚 */
     footer {
       background:#1e293b;
       color:#cbd5e1;
@@ -248,8 +233,6 @@
     }
     .footer-inner a:hover { color:#60a5fa; }
   </style>
-  <script src="works-data.js" defer></script>
-  <script src="works-render.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
